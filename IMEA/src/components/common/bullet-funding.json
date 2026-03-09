@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_common_bullet_fundings",
+  "info": {
+    "displayName": "bullet_funding"
+  },
+  "options": {},
+  "attributes": {
+    "tag": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "icon_name": {
+      "type": "string",
+      "required": true
+    },
+    "point_description": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}

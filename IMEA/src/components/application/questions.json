@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_application_questions",
+  "info": {
+    "displayName": "questions"
+  },
+  "options": {},
+  "attributes": {
+    "question": {
+      "type": "string",
+      "required": true
+    },
+    "dropdown_icon": {
+      "type": "string",
+      "required": true
+    },
+    "answer": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}

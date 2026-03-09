@@ -1,0 +1,96 @@
+{
+  "kind": "singleType",
+  "collectionName": "homepages",
+  "info": {
+    "singularName": "homepage",
+    "pluralName": "homepages",
+    "displayName": "Homepage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "phase_btn": {
+      "type": "string"
+    },
+    "Header": {
+      "type": "string",
+      "required": true
+    },
+    "header_description": {
+      "type": "text",
+      "required": true
+    },
+    "button_apply": {
+      "type": "string",
+      "required": true
+    },
+    "button_apply_link": {
+      "type": "string"
+    },
+    "button_fund": {
+      "type": "string"
+    },
+    "button_fund_link": {
+      "type": "string"
+    },
+    "hero_slides": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "section1_title": {
+      "type": "string",
+      "required": true
+    },
+    "leftside_descrip": {
+      "type": "text",
+      "required": true
+    },
+    "rightside_descrip": {
+      "type": "text",
+      "required": true
+    },
+    "section2_title": {
+      "type": "string"
+    },
+    "sect2_descrip": {
+      "type": "text"
+    },
+    "learn_more": {
+      "type": "string",
+      "required": true
+    },
+    "learn_more_link": {
+      "type": "string",
+      "required": true
+    },
+    "feature_cards": {
+      "type": "component",
+      "component": "homepage.feature-card",
+      "repeatable": true
+    },
+    "map_title": {
+      "type": "string",
+      "required": true
+    },
+    "map_icon": {
+      "type": "string",
+      "required": true
+    },
+    "mapcard": {
+      "type": "component",
+      "component": "homepage.map-card",
+      "repeatable": true
+    },
+    "lastsection": {
+      "type": "component",
+      "component": "homepage.lastsection",
+      "repeatable": true
+    }
+  }
+}

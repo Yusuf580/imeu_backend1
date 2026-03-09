@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_funding_downloads",
+  "info": {
+    "displayName": "download"
+  },
+  "options": {},
+  "attributes": {
+    "download_title": {
+      "type": "string",
+      "required": true
+    },
+    "icon_name": {
+      "type": "string"
+    },
+    "docs": {
+      "type": "component",
+      "component": "common.docs",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

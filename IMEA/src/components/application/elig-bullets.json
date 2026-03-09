@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_application_elig_bullets",
+  "info": {
+    "displayName": "elig_bullets"
+  },
+  "options": {},
+  "attributes": {
+    "icon_name": {
+      "type": "string",
+      "required": true
+    },
+    "icon_descriptions": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_aboutus_products",
+  "info": {
+    "displayName": "products"
+  },
+  "options": {},
+  "attributes": {
+    "prod_title": {
+      "type": "string",
+      "required": true
+    },
+    "products": {
+      "type": "string",
+      "required": true
+    },
+    "prod_icon": {
+      "type": "string",
+      "required": true
+    },
+    "bullet_icon": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}

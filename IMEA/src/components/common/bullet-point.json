@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_common_bullet_points",
+  "info": {
+    "displayName": "BulletPoint"
+  },
+  "options": {},
+  "attributes": {
+    "point": {
+      "type": "string"
+    },
+    "icon_name": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,50 @@
+{
+  "kind": "singleType",
+  "collectionName": "contact_uses",
+  "info": {
+    "singularName": "contact-us",
+    "pluralName": "contact-uses",
+    "displayName": "ContactUs"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "contact": {
+      "type": "component",
+      "component": "common.contact",
+      "repeatable": true
+    },
+    "office": {
+      "type": "component",
+      "component": "contact.offices",
+      "repeatable": false
+    },
+    "form_title": {
+      "type": "string"
+    },
+    "form_description": {
+      "type": "string"
+    },
+    "form_btn": {
+      "type": "string"
+    },
+    "btn_link": {
+      "type": "string"
+    },
+    "frequent_questions": {
+      "type": "component",
+      "component": "application.asked",
+      "repeatable": false
+    }
+  }
+}

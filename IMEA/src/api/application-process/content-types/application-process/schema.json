@@ -1,0 +1,59 @@
+{
+  "kind": "singleType",
+  "collectionName": "application_processes",
+  "info": {
+    "singularName": "application-process",
+    "pluralName": "application-processes",
+    "displayName": "ApplicationProcess"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "back_icon": {
+      "type": "string",
+      "required": true
+    },
+    "btn_title": {
+      "type": "string",
+      "required": true
+    },
+    "application_title": {
+      "type": "string",
+      "required": true
+    },
+    "application_details": {
+      "type": "component",
+      "component": "application.bulletapplication",
+      "repeatable": false
+    },
+    "title_disclaim": {
+      "type": "string",
+      "required": true
+    },
+    "disclaim_descrip": {
+      "type": "text",
+      "required": true
+    },
+    "process": {
+      "type": "component",
+      "component": "application.process-steps",
+      "repeatable": true
+    },
+    "qrcode": {
+      "type": "component",
+      "component": "application.qrcode",
+      "repeatable": false,
+      "required": true
+    },
+    "criteria": {
+      "type": "component",
+      "component": "application.criteria",
+      "repeatable": true,
+      "required": true,
+      "min": 1,
+      "max": 2
+    }
+  }
+}

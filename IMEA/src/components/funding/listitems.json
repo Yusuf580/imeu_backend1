@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_funding_listitems",
+  "info": {
+    "displayName": "Listitems"
+  },
+  "options": {},
+  "attributes": {
+    "icon_name": {
+      "type": "string",
+      "required": true
+    },
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "label_descrip": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

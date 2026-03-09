@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_homepage_lastsections",
+  "info": {
+    "displayName": "lastsection"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "btn1": {
+      "type": "string",
+      "required": true
+    },
+    "btn1_link": {
+      "type": "string",
+      "required": true
+    },
+    "btn2": {
+      "type": "string",
+      "required": true
+    },
+    "btn2_link": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}

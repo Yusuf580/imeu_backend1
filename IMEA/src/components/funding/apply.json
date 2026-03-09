@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_funding_applies",
+  "info": {
+    "displayName": "Apply"
+  },
+  "options": {},
+  "attributes": {
+    "main_title": {
+      "type": "string",
+      "required": true
+    },
+    "main_description": {
+      "type": "text",
+      "required": true
+    },
+    "sub_title": {
+      "type": "string",
+      "required": true
+    },
+    "subsection_descrip": {
+      "type": "text",
+      "required": true
+    },
+    "apply_button": {
+      "type": "string",
+      "required": true
+    },
+    "apply_btn_link": {
+      "type": "string",
+      "required": true
+    },
+    "icon_apply_name": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

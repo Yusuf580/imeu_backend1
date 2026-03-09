@@ -1,0 +1,33 @@
+{
+  "kind": "singleType",
+  "collectionName": "partners",
+  "info": {
+    "singularName": "partner",
+    "pluralName": "partners",
+    "displayName": "Partner"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "page_title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "donor": {
+      "type": "component",
+      "component": "partner.donor",
+      "repeatable": true
+    },
+    "partners": {
+      "type": "component",
+      "component": "partner.partners",
+      "repeatable": true
+    }
+  }
+}

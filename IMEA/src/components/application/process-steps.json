@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_application_process_steps",
+  "info": {
+    "displayName": "ProcessSteps"
+  },
+  "options": {},
+  "attributes": {
+    "step_number": {
+      "type": "string",
+      "required": true
+    },
+    "icon_name": {
+      "type": "string",
+      "required": true
+    },
+    "process_title": {
+      "type": "string",
+      "required": true
+    },
+    "link_text": {
+      "type": "string"
+    },
+    "link_url": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

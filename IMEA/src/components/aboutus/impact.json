@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_aboutus_impacts",
+  "info": {
+    "displayName": "impact"
+  },
+  "options": {},
+  "attributes": {
+    "icon_name": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    }
+  },
+  "config": {}
+}

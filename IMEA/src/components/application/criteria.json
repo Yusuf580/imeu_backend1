@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_application_criteria",
+  "info": {
+    "displayName": "Criteria"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "label_icon": {
+      "type": "string",
+      "required": true
+    },
+    "bullets": {
+      "type": "component",
+      "component": "application.elig-bullets",
+      "repeatable": true,
+      "required": false
+    }
+  },
+  "config": {}
+}

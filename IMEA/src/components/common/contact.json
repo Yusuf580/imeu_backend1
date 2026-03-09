@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_common_contacts",
+  "info": {
+    "displayName": "contact"
+  },
+  "options": {},
+  "attributes": {
+    "icon_name": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "address": {
+      "type": "string",
+      "required": false
+    },
+    "report_issue": {
+      "type": "string"
+    },
+    "report_link": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,68 @@
+{
+  "kind": "singleType",
+  "collectionName": "aboutuses",
+  "info": {
+    "singularName": "aboutus",
+    "pluralName": "aboutuses",
+    "displayName": "Aboutus"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "bg_image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "mission": {
+      "type": "component",
+      "component": "aboutus.missions",
+      "repeatable": true,
+      "min": 0,
+      "max": 2
+    },
+    "sec_icon": {
+      "type": "string",
+      "required": true
+    },
+    "sec_title": {
+      "type": "string",
+      "required": true
+    },
+    "sec_descrip": {
+      "type": "string",
+      "required": true
+    },
+    "theme": {
+      "type": "component",
+      "component": "aboutus.theme",
+      "repeatable": false
+    },
+    "sect_title": {
+      "type": "string"
+    },
+    "impact": {
+      "type": "component",
+      "component": "aboutus.impact",
+      "repeatable": true,
+      "min": 1,
+      "max": 4
+    }
+  }
+}

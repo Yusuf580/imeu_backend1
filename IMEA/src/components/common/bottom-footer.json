@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_common_bottom_footers",
+  "info": {
+    "displayName": "bottom_footer"
+  },
+  "options": {},
+  "attributes": {
+    "copyright": {
+      "type": "string",
+      "required": true
+    },
+    "policy": {
+      "type": "string",
+      "required": true
+    },
+    "policy_link": {
+      "type": "string",
+      "required": true
+    },
+    "terms_of_service": {
+      "type": "string",
+      "required": true
+    },
+    "terms_link": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}

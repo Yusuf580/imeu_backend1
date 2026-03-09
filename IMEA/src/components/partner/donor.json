@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_partner_donors",
+  "info": {
+    "displayName": "donor"
+  },
+  "options": {},
+  "attributes": {
+    "donor_image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "donor_title": {
+      "type": "string"
+    },
+    "donor_description": {
+      "type": "text",
+      "required": true
+    }
+  },
+  "config": {}
+}

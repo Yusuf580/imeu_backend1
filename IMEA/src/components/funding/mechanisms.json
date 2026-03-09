@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_funding_mechanisms",
+  "info": {
+    "displayName": "Mechanisms"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "mechanisms": {
+      "type": "component",
+      "component": "common.bullet-funding",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

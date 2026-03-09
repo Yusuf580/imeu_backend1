@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_homepage_map_cards",
+  "info": {
+    "displayName": "MapCard"
+  },
+  "options": {},
+  "attributes": {
+    "icon_name": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}

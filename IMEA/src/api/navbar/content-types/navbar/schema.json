@@ -1,0 +1,43 @@
+{
+  "kind": "singleType",
+  "collectionName": "navbars",
+  "info": {
+    "singularName": "navbar",
+    "pluralName": "navbars",
+    "displayName": "Navbar"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "company_logo": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "logo_alt_text": {
+      "type": "string"
+    },
+    "company_name": {
+      "type": "string"
+    },
+    "nav_items": {
+      "type": "component",
+      "component": "navigation.nav-item",
+      "repeatable": true
+    },
+    "button_label": {
+      "type": "string"
+    },
+    "button_link": {
+      "type": "string"
+    }
+  }
+}

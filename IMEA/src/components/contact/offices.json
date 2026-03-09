@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_contact_offices",
+  "info": {
+    "displayName": "Offices"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "icon_name": {
+      "type": "string"
+    },
+    "address_name": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "offices": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

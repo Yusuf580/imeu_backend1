@@ -1,0 +1,43 @@
+{
+  "collectionName": "components_partner_partners",
+  "info": {
+    "displayName": "partners"
+  },
+  "options": {},
+  "attributes": {
+    "partner_image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "partner_title": {
+      "type": "string",
+      "required": true
+    },
+    "tag": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "learn_label": {
+      "type": "string",
+      "required": true
+    },
+    "learn_link": {
+      "type": "string",
+      "required": true
+    },
+    "learn_icon": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

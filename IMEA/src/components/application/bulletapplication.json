@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_application_bulletapplications",
+  "info": {
+    "displayName": "bulletapplication"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "StartDate": {
+      "type": "datetime",
+      "required": true
+    },
+    "EndDate": {
+      "type": "datetime",
+      "required": true
+    }
+  },
+  "config": {}
+}

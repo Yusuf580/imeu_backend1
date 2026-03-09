@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_application_askeds",
+  "info": {
+    "displayName": "Asked"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "label_icon": {
+      "type": "string",
+      "required": true
+    },
+    "frequent_questions": {
+      "type": "component",
+      "component": "application.questions",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
