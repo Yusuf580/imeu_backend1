@@ -49,6 +49,11 @@
       "type": "component",
       "component": "funding.apply",
       "repeatable": false
+    },
+    "docs": {
+      "type": "component",
+      "component": "funding.download",
+      "repeatable": false
     }
   }
 }

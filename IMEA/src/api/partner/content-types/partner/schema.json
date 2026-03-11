@@ -28,6 +28,24 @@
       "type": "component",
       "component": "partner.partners",
       "repeatable": true
+    },
+    "Ready_Title": {
+      "type": "string"
+    },
+    "descrip": {
+      "type": "text"
+    },
+    "explore_btn": {
+      "type": "string"
+    },
+    "explore_link": {
+      "type": "string"
+    },
+    "start_btn": {
+      "type": "string"
+    },
+    "start_btn_link": {
+      "type": "string"
     }
   }
 }

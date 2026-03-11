@@ -8,5 +8,8 @@ export default (config: UserConfig) => {
         '@': '/src',
       },
     },
+    server: {
+      allowedHosts: ['imeu-webapi.omni.co.ug'],
+    },
   });
 };

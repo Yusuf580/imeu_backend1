@@ -16,13 +16,24 @@
       "type": "string",
       "required": true
     },
-    "icon_name": {
-      "type": "string",
-      "required": true
+    "bullets": {
+      "type": "component",
+      "component": "common.bullet-point",
+      "repeatable": true
     },
-    "point_description": {
-      "type": "string",
-      "required": true
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Learn_btn": {
+      "type": "string"
+    },
+    "learn_btn_link": {
+      "type": "string"
     }
   },
   "config": {}

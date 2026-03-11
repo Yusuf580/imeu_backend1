@@ -27,7 +27,7 @@
       ]
     },
     "description": {
-      "type": "string",
+      "type": "text",
       "required": true
     },
     "mission": {
@@ -46,7 +46,7 @@
       "required": true
     },
     "sec_descrip": {
-      "type": "string",
+      "type": "text",
       "required": true
     },
     "theme": {

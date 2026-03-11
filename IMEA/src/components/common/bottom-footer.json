@@ -7,23 +7,23 @@
   "attributes": {
     "copyright": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "policy": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "policy_link": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "terms_of_service": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "terms_link": {
       "type": "string",
-      "required": true
+      "required": false
     }
   },
   "config": {}

@@ -9,17 +9,14 @@
       "type": "string",
       "required": true
     },
-    "products": {
-      "type": "string",
-      "required": true
-    },
     "prod_icon": {
       "type": "string",
       "required": true
     },
-    "bullet_icon": {
-      "type": "string",
-      "required": true
+    "bullet": {
+      "type": "component",
+      "component": "common.bullet-point",
+      "repeatable": true
     }
   },
   "config": {}

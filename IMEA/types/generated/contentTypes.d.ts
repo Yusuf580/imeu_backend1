@@ -483,7 +483,7 @@ export interface ApiAboutusAboutus extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    description: Schema.Attribute.String & Schema.Attribute.Required;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
     impact: Schema.Attribute.Component<'aboutus.impact', true> &
       Schema.Attribute.SetMinMax<
         {
@@ -507,7 +507,7 @@ export interface ApiAboutusAboutus extends Struct.SingleTypeSchema {
         number
       >;
     publishedAt: Schema.Attribute.DateTime;
-    sec_descrip: Schema.Attribute.String & Schema.Attribute.Required;
+    sec_descrip: Schema.Attribute.Text & Schema.Attribute.Required;
     sec_icon: Schema.Attribute.String & Schema.Attribute.Required;
     sec_title: Schema.Attribute.String & Schema.Attribute.Required;
     sect_title: Schema.Attribute.String;
@@ -656,6 +656,7 @@ export interface ApiFundingFunding extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    docs: Schema.Attribute.Component<'funding.download', false>;
     listitems: Schema.Attribute.Component<'funding.listitems', true> &
       Schema.Attribute.Required &
       Schema.Attribute.SetMinMax<
@@ -784,8 +785,11 @@ export interface ApiPartnerPartner extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    descrip: Schema.Attribute.Text;
     description: Schema.Attribute.Text & Schema.Attribute.Required;
     donor: Schema.Attribute.Component<'partner.donor', true>;
+    explore_btn: Schema.Attribute.String;
+    explore_link: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -795,6 +799,9 @@ export interface ApiPartnerPartner extends Struct.SingleTypeSchema {
     page_title: Schema.Attribute.String & Schema.Attribute.Required;
     partners: Schema.Attribute.Component<'partner.partners', true>;
     publishedAt: Schema.Attribute.DateTime;
+    Ready_Title: Schema.Attribute.String;
+    start_btn: Schema.Attribute.String;
+    start_btn_link: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

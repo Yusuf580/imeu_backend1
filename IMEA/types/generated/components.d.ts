@@ -6,7 +6,7 @@ export interface AboutusImpact extends Struct.ComponentSchema {
     displayName: 'impact';
   };
   attributes: {
-    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    description: Schema.Attribute.Text;
     icon_name: Schema.Attribute.String & Schema.Attribute.Required;
     title: Schema.Attribute.String & Schema.Attribute.Required;
   };
@@ -18,7 +18,7 @@ export interface AboutusMissions extends Struct.ComponentSchema {
     displayName: 'missions';
   };
   attributes: {
-    description: Schema.Attribute.String & Schema.Attribute.Required;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
     icon_name: Schema.Attribute.String & Schema.Attribute.Required;
     title: Schema.Attribute.String & Schema.Attribute.Required;
   };
@@ -30,10 +30,9 @@ export interface AboutusProducts extends Struct.ComponentSchema {
     displayName: 'products';
   };
   attributes: {
-    bullet_icon: Schema.Attribute.String & Schema.Attribute.Required;
+    bullet: Schema.Attribute.Component<'common.bullet-point', true>;
     prod_icon: Schema.Attribute.String & Schema.Attribute.Required;
     prod_title: Schema.Attribute.String & Schema.Attribute.Required;
-    products: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -43,7 +42,7 @@ export interface AboutusTheme extends Struct.ComponentSchema {
     displayName: 'Theme';
   };
   attributes: {
-    description: Schema.Attribute.String & Schema.Attribute.Required;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
     theme: Schema.Attribute.Component<'aboutus.products', true> &
       Schema.Attribute.SetMinMax<
         {
@@ -150,11 +149,11 @@ export interface CommonBottomFooter extends Struct.ComponentSchema {
     displayName: 'bottom_footer';
   };
   attributes: {
-    copyright: Schema.Attribute.String & Schema.Attribute.Required;
-    policy: Schema.Attribute.String & Schema.Attribute.Required;
-    policy_link: Schema.Attribute.String & Schema.Attribute.Required;
-    terms_link: Schema.Attribute.String & Schema.Attribute.Required;
-    terms_of_service: Schema.Attribute.String & Schema.Attribute.Required;
+    copyright: Schema.Attribute.String;
+    policy: Schema.Attribute.String;
+    policy_link: Schema.Attribute.String;
+    terms_link: Schema.Attribute.String;
+    terms_of_service: Schema.Attribute.String;
   };
 }
 
@@ -164,10 +163,12 @@ export interface CommonBulletFunding extends Struct.ComponentSchema {
     displayName: 'bullet_funding';
   };
   attributes: {
+    bullets: Schema.Attribute.Component<'common.bullet-point', true>;
     description: Schema.Attribute.String & Schema.Attribute.Required;
-    icon_name: Schema.Attribute.String & Schema.Attribute.Required;
+    image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     label: Schema.Attribute.String & Schema.Attribute.Required;
-    point_description: Schema.Attribute.String & Schema.Attribute.Required;
+    Learn_btn: Schema.Attribute.String;
+    learn_btn_link: Schema.Attribute.String;
     tag: Schema.Attribute.String;
   };
 }
@@ -179,7 +180,7 @@ export interface CommonBulletPoint extends Struct.ComponentSchema {
   };
   attributes: {
     icon_name: Schema.Attribute.String;
-    point: Schema.Attribute.String;
+    point: Schema.Attribute.Text;
   };
 }
 
