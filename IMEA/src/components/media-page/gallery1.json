@@ -1,21 +1,21 @@
 {
-  "collectionName": "components_aboutus_themes",
+  "collectionName": "components_media_page_gallery1s",
   "info": {
-    "displayName": "Theme"
+    "displayName": "Gallery1"
   },
   "options": {},
   "attributes": {
-    "theme_title": {
+    "header": {
       "type": "string",
       "required": true
     },
-    "description": {
-      "type": "text",
+    "Title": {
+      "type": "string",
       "required": true
     },
-    "theme": {
+    "gallery_card": {
       "type": "component",
-      "component": "aboutus.products",
+      "component": "media-page.sub-section",
       "repeatable": true
     }
   },

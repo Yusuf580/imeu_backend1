@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_application_questionnaires",
+  "info": {
+    "displayName": "questionnaire"
+  },
+  "options": {},
+  "attributes": {
+    "qn_icon": {
+      "type": "string",
+      "required": false
+    },
+    "bullet": {
+      "type": "component",
+      "component": "common.bullet-point",
+      "repeatable": true
+    },
+    "qn_link": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

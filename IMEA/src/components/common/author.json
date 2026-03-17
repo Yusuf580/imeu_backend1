@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_common_authors",
+  "info": {
+    "displayName": "author"
+  },
+  "options": {},
+  "attributes": {
+    "author_name": {
+      "type": "string"
+    },
+    "author_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "author_phone": {
+      "type": "string"
+    },
+    "author_email": {
+      "type": "email"
+    }
+  },
+  "config": {}
+}

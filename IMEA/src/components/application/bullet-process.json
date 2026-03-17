@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_application_bullet_processes",
+  "info": {
+    "displayName": "bullet_process"
+  },
+  "options": {},
+  "attributes": {
+    "icon_name": {
+      "type": "string"
+    },
+    "point_title": {
+      "type": "string",
+      "required": true
+    },
+    "point_description": {
+      "type": "text",
+      "required": true
+    }
+  },
+  "config": {}
+}

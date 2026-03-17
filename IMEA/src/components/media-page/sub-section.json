@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_media_page_sub_sections",
+  "info": {
+    "displayName": "sub-section"
+  },
+  "options": {},
+  "attributes": {
+    "news_title": {
+      "type": "string",
+      "required": true
+    },
+    "news_link": {
+      "type": "string",
+      "required": true
+    },
+    "gallery_link": {
+      "type": "string",
+      "required": true
+    },
+    "gallery": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  },
+  "config": {}
+}

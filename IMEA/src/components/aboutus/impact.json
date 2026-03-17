@@ -5,7 +5,7 @@
   },
   "options": {},
   "attributes": {
-    "icon_name": {
+    "count": {
       "type": "string",
       "required": true
     },

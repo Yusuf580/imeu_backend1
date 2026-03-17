@@ -91,6 +91,12 @@
       "type": "component",
       "component": "homepage.lastsection",
       "repeatable": true
+    },
+    "icon_name_map": {
+      "type": "string"
+    },
+    "title_real_map": {
+      "type": "string"
     }
   }
 }

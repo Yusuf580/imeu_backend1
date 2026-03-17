@@ -9,12 +9,8 @@
       "type": "string",
       "required": true
     },
-    "StartDate": {
-      "type": "datetime",
-      "required": true
-    },
     "EndDate": {
-      "type": "datetime",
+      "type": "date",
       "required": true
     }
   },

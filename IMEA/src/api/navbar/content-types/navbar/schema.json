@@ -38,6 +38,11 @@
     },
     "button_link": {
       "type": "string"
+    },
+    "blogs": {
+      "type": "component",
+      "component": "news.blogs",
+      "repeatable": true
     }
   }
 }

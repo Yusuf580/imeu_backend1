@@ -484,28 +484,14 @@ export interface ApiAboutusAboutus extends Struct.SingleTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     description: Schema.Attribute.Text & Schema.Attribute.Required;
-    impact: Schema.Attribute.Component<'aboutus.impact', true> &
-      Schema.Attribute.SetMinMax<
-        {
-          max: 4;
-          min: 1;
-        },
-        number
-      >;
+    impact: Schema.Attribute.Component<'aboutus.impact', true>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::aboutus.aboutus'
     > &
       Schema.Attribute.Private;
-    mission: Schema.Attribute.Component<'aboutus.missions', true> &
-      Schema.Attribute.SetMinMax<
-        {
-          max: 2;
-          min: 0;
-        },
-        number
-      >;
+    mission: Schema.Attribute.Component<'aboutus.missions', true>;
     publishedAt: Schema.Attribute.DateTime;
     sec_descrip: Schema.Attribute.Text & Schema.Attribute.Required;
     sec_icon: Schema.Attribute.String & Schema.Attribute.Required;
@@ -531,25 +517,20 @@ export interface ApiApplicationProcessApplicationProcess
     draftAndPublish: true;
   };
   attributes: {
+    application_description: Schema.Attribute.Text & Schema.Attribute.Required;
     application_details: Schema.Attribute.Component<
       'application.bulletapplication',
-      false
+      true
     >;
     application_title: Schema.Attribute.String & Schema.Attribute.Required;
+    back_btn_link: Schema.Attribute.String;
     back_icon: Schema.Attribute.String & Schema.Attribute.Required;
     btn_title: Schema.Attribute.String & Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     criteria: Schema.Attribute.Component<'application.criteria', true> &
-      Schema.Attribute.Required &
-      Schema.Attribute.SetMinMax<
-        {
-          max: 2;
-          min: 1;
-        },
-        number
-      >;
+      Schema.Attribute.Required;
     disclaim_descrip: Schema.Attribute.Text & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -557,10 +538,20 @@ export interface ApiApplicationProcessApplicationProcess
       'api::application-process.application-process'
     > &
       Schema.Attribute.Private;
+    procedures: Schema.Attribute.Component<
+      'application.application-portal',
+      false
+    >;
     process: Schema.Attribute.Component<'application.process-steps', true>;
+    process_description: Schema.Attribute.Text;
+    process_heading: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     qrcode: Schema.Attribute.Component<'application.qrcode', false> &
       Schema.Attribute.Required;
+    Question_description: Schema.Attribute.Text & Schema.Attribute.Required;
+    question_icon: Schema.Attribute.String;
+    Question_title: Schema.Attribute.String & Schema.Attribute.Required;
+    question12: Schema.Attribute.Component<'application.questionnaire', true>;
     title_disclaim: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -616,7 +607,7 @@ export interface ApiFooterFooter extends Struct.SingleTypeSchema {
   };
   attributes: {
     bottom_footer: Schema.Attribute.Component<'common.bottom-footer', false>;
-    company_logo: Schema.Attribute.String & Schema.Attribute.Required;
+    company_logo1: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     company_title: Schema.Attribute.String & Schema.Attribute.Required;
     Contact_title: Schema.Attribute.String & Schema.Attribute.Required;
     contactus: Schema.Attribute.Component<'footer.contactus', true> &
@@ -634,7 +625,7 @@ export interface ApiFooterFooter extends Struct.SingleTypeSchema {
       Schema.Attribute.Private;
     program_description: Schema.Attribute.String & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
-    quick_links: Schema.Attribute.Component<'navigation.footeritems', false>;
+    quick_links: Schema.Attribute.Component<'navigation.footeritems', true>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -687,6 +678,35 @@ export interface ApiFundingFunding extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiGalleryGallery extends Struct.SingleTypeSchema {
+  collectionName: 'galleries';
+  info: {
+    displayName: 'Gallery';
+    pluralName: 'galleries';
+    singularName: 'gallery';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    gallery_upload: Schema.Attribute.Media<'images' | 'videos' | 'audios'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::gallery.gallery'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    youtube_links: Schema.Attribute.String;
+  };
+}
+
 export interface ApiHomepageHomepage extends Struct.SingleTypeSchema {
   collectionName: 'homepages';
   info: {
@@ -710,6 +730,7 @@ export interface ApiHomepageHomepage extends Struct.SingleTypeSchema {
     header_description: Schema.Attribute.Text & Schema.Attribute.Required;
     hero_slides: Schema.Attribute.Media<'images', true> &
       Schema.Attribute.Required;
+    icon_name_map: Schema.Attribute.String;
     lastsection: Schema.Attribute.Component<'homepage.lastsection', true>;
     learn_more: Schema.Attribute.String & Schema.Attribute.Required;
     learn_more_link: Schema.Attribute.String & Schema.Attribute.Required;
@@ -729,6 +750,37 @@ export interface ApiHomepageHomepage extends Struct.SingleTypeSchema {
     sect2_descrip: Schema.Attribute.Text;
     section1_title: Schema.Attribute.String & Schema.Attribute.Required;
     section2_title: Schema.Attribute.String;
+    title_real_map: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiMediaPageMediaPage extends Struct.SingleTypeSchema {
+  collectionName: 'media_pages';
+  info: {
+    displayName: 'Media_page';
+    pluralName: 'media-pages';
+    singularName: 'media-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Articles: Schema.Attribute.Component<'common.articles', true>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::media-page.media-page'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -746,6 +798,7 @@ export interface ApiNavbarNavbar extends Struct.SingleTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    blogs: Schema.Attribute.Component<'news.blogs', true>;
     button_label: Schema.Attribute.String;
     button_link: Schema.Attribute.String;
     company_logo: Schema.Attribute.Media<
@@ -802,6 +855,34 @@ export interface ApiPartnerPartner extends Struct.SingleTypeSchema {
     Ready_Title: Schema.Attribute.String;
     start_btn: Schema.Attribute.String;
     start_btn_link: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPublicationPublication extends Struct.SingleTypeSchema {
+  collectionName: 'publications';
+  info: {
+    displayName: 'Publication';
+    pluralName: 'publications';
+    singularName: 'publication';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::publication.publication'
+    > &
+      Schema.Attribute.Private;
+    publication_upload: Schema.Attribute.Media<'files'>;
+    publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1393,9 +1474,12 @@ declare module '@strapi/strapi' {
       'api::contact-us.contact-us': ApiContactUsContactUs;
       'api::footer.footer': ApiFooterFooter;
       'api::funding.funding': ApiFundingFunding;
+      'api::gallery.gallery': ApiGalleryGallery;
       'api::homepage.homepage': ApiHomepageHomepage;
+      'api::media-page.media-page': ApiMediaPageMediaPage;
       'api::navbar.navbar': ApiNavbarNavbar;
       'api::partner.partner': ApiPartnerPartner;
+      'api::publication.publication': ApiPublicationPublication;
       'api::site-identity.site-identity': ApiSiteIdentitySiteIdentity;
       'api::theme-setting.theme-setting': ApiThemeSettingThemeSetting;
       'plugin::content-releases.release': PluginContentReleasesRelease;

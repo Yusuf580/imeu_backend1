@@ -1,11 +1,11 @@
 {
-  "collectionName": "components_aboutus_themes",
+  "collectionName": "components_application_application_portals",
   "info": {
-    "displayName": "Theme"
+    "displayName": "Application Portal"
   },
   "options": {},
   "attributes": {
-    "theme_title": {
+    "header": {
       "type": "string",
       "required": true
     },
@@ -13,9 +13,9 @@
       "type": "text",
       "required": true
     },
-    "theme": {
+    "bullet": {
       "type": "component",
-      "component": "aboutus.products",
+      "component": "application.bullet-process",
       "repeatable": true
     }
   },

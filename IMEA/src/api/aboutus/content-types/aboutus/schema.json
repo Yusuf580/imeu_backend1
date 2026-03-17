@@ -33,9 +33,7 @@
     "mission": {
       "type": "component",
       "component": "aboutus.missions",
-      "repeatable": true,
-      "min": 0,
-      "max": 2
+      "repeatable": true
     },
     "sec_icon": {
       "type": "string",
@@ -60,9 +58,7 @@
     "impact": {
       "type": "component",
       "component": "aboutus.impact",
-      "repeatable": true,
-      "min": 1,
-      "max": 4
+      "repeatable": true
     }
   }
 }

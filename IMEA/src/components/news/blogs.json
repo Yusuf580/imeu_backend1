@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_news_blogs",
+  "info": {
+    "displayName": "blogs"
+  },
+  "options": {},
+  "attributes": {
+    "tag": {
+      "type": "string"
+    },
+    "blog_title": {
+      "type": "text",
+      "required": true
+    },
+    "blog_description": {
+      "type": "text",
+      "required": true
+    },
+    "more_btn": {
+      "type": "string",
+      "required": true
+    },
+    "btn_link": {
+      "type": "string",
+      "required": true
+    },
+    "blog_image": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "date_of_publication": {
+      "type": "date",
+      "required": true
+    }
+  },
+  "config": {}
+}

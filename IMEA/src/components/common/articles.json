@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_common_articles",
+  "info": {
+    "displayName": "Articles"
+  },
+  "options": {},
+  "attributes": {
+    "article_heading": {
+      "type": "string"
+    },
+    "article_content": {
+      "type": "string"
+    },
+    "article_date": {
+      "type": "date"
+    },
+    "article_category": {
+      "type": "string"
+    },
+    "article_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "author": {
+      "type": "component",
+      "component": "common.author",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

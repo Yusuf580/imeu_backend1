@@ -11,9 +11,13 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "company_logo": {
-      "type": "string",
-      "required": true
+    "company_logo1": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "company_title": {
       "type": "string",
@@ -26,7 +30,7 @@
     "quick_links": {
       "type": "component",
       "component": "navigation.footeritems",
-      "repeatable": false
+      "repeatable": true
     },
     "Contact_title": {
       "type": "string",

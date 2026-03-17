@@ -6,8 +6,8 @@ export interface AboutusImpact extends Struct.ComponentSchema {
     displayName: 'impact';
   };
   attributes: {
+    count: Schema.Attribute.String & Schema.Attribute.Required;
     description: Schema.Attribute.Text;
-    icon_name: Schema.Attribute.String & Schema.Attribute.Required;
     title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
@@ -43,15 +43,20 @@ export interface AboutusTheme extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text & Schema.Attribute.Required;
-    theme: Schema.Attribute.Component<'aboutus.products', true> &
-      Schema.Attribute.SetMinMax<
-        {
-          max: 2;
-          min: 0;
-        },
-        number
-      >;
+    theme: Schema.Attribute.Component<'aboutus.products', true>;
     theme_title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface ApplicationApplicationPortal extends Struct.ComponentSchema {
+  collectionName: 'components_application_application_portals';
+  info: {
+    displayName: 'Application Portal';
+  };
+  attributes: {
+    bullet: Schema.Attribute.Component<'application.bullet-process', true>;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    header: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -70,15 +75,26 @@ export interface ApplicationAsked extends Struct.ComponentSchema {
   };
 }
 
+export interface ApplicationBulletProcess extends Struct.ComponentSchema {
+  collectionName: 'components_application_bullet_processes';
+  info: {
+    displayName: 'bullet_process';
+  };
+  attributes: {
+    icon_name: Schema.Attribute.String;
+    point_description: Schema.Attribute.Text & Schema.Attribute.Required;
+    point_title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface ApplicationBulletapplication extends Struct.ComponentSchema {
   collectionName: 'components_application_bulletapplications';
   info: {
     displayName: 'bulletapplication';
   };
   attributes: {
-    EndDate: Schema.Attribute.DateTime & Schema.Attribute.Required;
+    EndDate: Schema.Attribute.Date & Schema.Attribute.Required;
     label: Schema.Attribute.String & Schema.Attribute.Required;
-    StartDate: Schema.Attribute.DateTime & Schema.Attribute.Required;
   };
 }
 
@@ -91,6 +107,17 @@ export interface ApplicationCriteria extends Struct.ComponentSchema {
     bullets: Schema.Attribute.Component<'application.elig-bullets', true>;
     label: Schema.Attribute.String & Schema.Attribute.Required;
     label_icon: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface ApplicationDisclaimers extends Struct.ComponentSchema {
+  collectionName: 'components_application_disclaimers';
+  info: {
+    displayName: 'disclaimers';
+  };
+  attributes: {
+    disclaimer: Schema.Attribute.Component<'common.disclaim', true>;
+    Title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -114,8 +141,8 @@ export interface ApplicationProcessSteps extends Struct.ComponentSchema {
     icon_name: Schema.Attribute.String & Schema.Attribute.Required;
     link_text: Schema.Attribute.String;
     link_url: Schema.Attribute.String;
+    process_descrip: Schema.Attribute.Text;
     process_title: Schema.Attribute.String & Schema.Attribute.Required;
-    step_number: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -131,6 +158,18 @@ export interface ApplicationQrcode extends Struct.ComponentSchema {
   };
 }
 
+export interface ApplicationQuestionnaire extends Struct.ComponentSchema {
+  collectionName: 'components_application_questionnaires';
+  info: {
+    displayName: 'questionnaire';
+  };
+  attributes: {
+    bullet: Schema.Attribute.Component<'common.bullet-point', true>;
+    qn_icon: Schema.Attribute.String;
+    qn_link: Schema.Attribute.String;
+  };
+}
+
 export interface ApplicationQuestions extends Struct.ComponentSchema {
   collectionName: 'components_application_questions';
   info: {
@@ -140,6 +179,36 @@ export interface ApplicationQuestions extends Struct.ComponentSchema {
     answer: Schema.Attribute.String & Schema.Attribute.Required;
     dropdown_icon: Schema.Attribute.String & Schema.Attribute.Required;
     question: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface CommonArticles extends Struct.ComponentSchema {
+  collectionName: 'components_common_articles';
+  info: {
+    displayName: 'Articles';
+  };
+  attributes: {
+    article_category: Schema.Attribute.String;
+    article_content: Schema.Attribute.String;
+    article_date: Schema.Attribute.Date;
+    article_heading: Schema.Attribute.String;
+    article_image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    author: Schema.Attribute.Component<'common.author', true>;
+  };
+}
+
+export interface CommonAuthor extends Struct.ComponentSchema {
+  collectionName: 'components_common_authors';
+  info: {
+    displayName: 'author';
+  };
+  attributes: {
+    author_email: Schema.Attribute.Email;
+    author_image: Schema.Attribute.Media<'images'>;
+    author_name: Schema.Attribute.String;
+    author_phone: Schema.Attribute.String;
   };
 }
 
@@ -179,8 +248,8 @@ export interface CommonBulletPoint extends Struct.ComponentSchema {
     displayName: 'BulletPoint';
   };
   attributes: {
-    icon_name: Schema.Attribute.String;
-    point: Schema.Attribute.Text;
+    icon_name: Schema.Attribute.String & Schema.Attribute.Required;
+    point: Schema.Attribute.Text & Schema.Attribute.Required;
   };
 }
 
@@ -196,6 +265,19 @@ export interface CommonContact extends Struct.ComponentSchema {
     report_issue: Schema.Attribute.String;
     report_link: Schema.Attribute.String;
     title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface CommonDisclaim extends Struct.ComponentSchema {
+  collectionName: 'components_common_disclaims';
+  info: {
+    displayName: 'disclaim';
+  };
+  attributes: {
+    icon_name: Schema.Attribute.String & Schema.Attribute.Required;
+    link: Schema.Attribute.String;
+    point_description: Schema.Attribute.Text & Schema.Attribute.Required;
+    point_title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -298,6 +380,17 @@ export interface FundingMechanisms extends Struct.ComponentSchema {
   };
 }
 
+export interface GalleryImageDisplay extends Struct.ComponentSchema {
+  collectionName: 'components_gallery_image_displays';
+  info: {
+    displayName: 'image-display';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    image_description: Schema.Attribute.Text;
+  };
+}
+
 export interface HomepageFeatureCard extends Struct.ComponentSchema {
   collectionName: 'components_homepage_feature_cards';
   info: {
@@ -340,6 +433,31 @@ export interface HomepageMapCard extends Struct.ComponentSchema {
   };
 }
 
+export interface MediaPageGallery1 extends Struct.ComponentSchema {
+  collectionName: 'components_media_page_gallery1s';
+  info: {
+    displayName: 'Gallery1';
+  };
+  attributes: {
+    gallery_card: Schema.Attribute.Component<'media-page.sub-section', true>;
+    header: Schema.Attribute.String & Schema.Attribute.Required;
+    Title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface MediaPageSubSection extends Struct.ComponentSchema {
+  collectionName: 'components_media_page_sub_sections';
+  info: {
+    displayName: 'sub-section';
+  };
+  attributes: {
+    gallery: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    gallery_link: Schema.Attribute.String & Schema.Attribute.Required;
+    news_link: Schema.Attribute.String & Schema.Attribute.Required;
+    news_title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface NavigationFooteritems extends Struct.ComponentSchema {
   collectionName: 'components_navigation_footeritems';
   info: {
@@ -361,6 +479,23 @@ export interface NavigationNavItem extends Struct.ComponentSchema {
     icon_name: Schema.Attribute.String;
     label: Schema.Attribute.String & Schema.Attribute.Required;
     link: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface NewsBlogs extends Struct.ComponentSchema {
+  collectionName: 'components_news_blogs';
+  info: {
+    displayName: 'blogs';
+  };
+  attributes: {
+    blog_description: Schema.Attribute.Text & Schema.Attribute.Required;
+    blog_image: Schema.Attribute.Media<'images', true> &
+      Schema.Attribute.Required;
+    blog_title: Schema.Attribute.Text & Schema.Attribute.Required;
+    btn_link: Schema.Attribute.String & Schema.Attribute.Required;
+    date_of_publication: Schema.Attribute.Date & Schema.Attribute.Required;
+    more_btn: Schema.Attribute.String & Schema.Attribute.Required;
+    tag: Schema.Attribute.String;
   };
 }
 
@@ -402,17 +537,24 @@ declare module '@strapi/strapi' {
       'aboutus.missions': AboutusMissions;
       'aboutus.products': AboutusProducts;
       'aboutus.theme': AboutusTheme;
+      'application.application-portal': ApplicationApplicationPortal;
       'application.asked': ApplicationAsked;
+      'application.bullet-process': ApplicationBulletProcess;
       'application.bulletapplication': ApplicationBulletapplication;
       'application.criteria': ApplicationCriteria;
+      'application.disclaimers': ApplicationDisclaimers;
       'application.elig-bullets': ApplicationEligBullets;
       'application.process-steps': ApplicationProcessSteps;
       'application.qrcode': ApplicationQrcode;
+      'application.questionnaire': ApplicationQuestionnaire;
       'application.questions': ApplicationQuestions;
+      'common.articles': CommonArticles;
+      'common.author': CommonAuthor;
       'common.bottom-footer': CommonBottomFooter;
       'common.bullet-funding': CommonBulletFunding;
       'common.bullet-point': CommonBulletPoint;
       'common.contact': CommonContact;
+      'common.disclaim': CommonDisclaim;
       'common.docs': CommonDocs;
       'contact.offices': ContactOffices;
       'footer.contactus': FooterContactus;
@@ -421,11 +563,15 @@ declare module '@strapi/strapi' {
       'funding.download': FundingDownload;
       'funding.listitems': FundingListitems;
       'funding.mechanisms': FundingMechanisms;
+      'gallery.image-display': GalleryImageDisplay;
       'homepage.feature-card': HomepageFeatureCard;
       'homepage.lastsection': HomepageLastsection;
       'homepage.map-card': HomepageMapCard;
+      'media-page.gallery1': MediaPageGallery1;
+      'media-page.sub-section': MediaPageSubSection;
       'navigation.footeritems': NavigationFooteritems;
       'navigation.nav-item': NavigationNavItem;
+      'news.blogs': NewsBlogs;
       'partner.donor': PartnerDonor;
       'partner.partners': PartnerPartners;
     }

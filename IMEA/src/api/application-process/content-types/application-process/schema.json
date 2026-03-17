@@ -15,18 +15,25 @@
       "type": "string",
       "required": true
     },
-    "btn_title": {
+    "back_btn_link": {
+      "type": "string"
+    },
+    "application_title": {
       "type": "string",
       "required": true
     },
-    "application_title": {
+    "application_description": {
+      "type": "text",
+      "required": true
+    },
+    "btn_title": {
       "type": "string",
       "required": true
     },
     "application_details": {
       "type": "component",
       "component": "application.bulletapplication",
-      "repeatable": false
+      "repeatable": true
     },
     "title_disclaim": {
       "type": "string",
@@ -36,10 +43,21 @@
       "type": "text",
       "required": true
     },
+    "process_heading": {
+      "type": "string"
+    },
+    "process_description": {
+      "type": "text"
+    },
     "process": {
       "type": "component",
       "component": "application.process-steps",
       "repeatable": true
+    },
+    "procedures": {
+      "type": "component",
+      "component": "application.application-portal",
+      "repeatable": false
     },
     "qrcode": {
       "type": "component",
@@ -51,9 +69,23 @@
       "type": "component",
       "component": "application.criteria",
       "repeatable": true,
-      "required": true,
-      "min": 1,
-      "max": 2
+      "required": true
+    },
+    "Question_title": {
+      "type": "string",
+      "required": true
+    },
+    "Question_description": {
+      "type": "text",
+      "required": true
+    },
+    "question_icon": {
+      "type": "string"
+    },
+    "question12": {
+      "type": "component",
+      "component": "application.questionnaire",
+      "repeatable": true
     }
   }
 }

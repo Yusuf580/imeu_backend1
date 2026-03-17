@@ -1,7 +1,7 @@
 {
-  "collectionName": "components_application_process_steps",
+  "collectionName": "components_common_disclaims",
   "info": {
-    "displayName": "ProcessSteps"
+    "displayName": "disclaim"
   },
   "options": {},
   "attributes": {
@@ -9,18 +9,16 @@
       "type": "string",
       "required": true
     },
-    "process_title": {
+    "point_title": {
       "type": "string",
       "required": true
     },
-    "link_text": {
-      "type": "string"
+    "point_description": {
+      "type": "text",
+      "required": true
     },
-    "link_url": {
+    "link": {
       "type": "string"
-    },
-    "process_descrip": {
-      "type": "text"
     }
   },
   "config": {}

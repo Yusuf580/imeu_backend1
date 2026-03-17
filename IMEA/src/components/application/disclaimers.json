@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_application_disclaimers",
+  "info": {
+    "displayName": "disclaimers"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "disclaimer": {
+      "type": "component",
+      "component": "common.disclaim",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
